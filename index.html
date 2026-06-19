@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Well Soon, Saniaaa ✨🫶🏻💗</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255,255,255,0.4), 0 0 20px rgba(244,114,182,0.3), 0 0 40px rgba(236,72,153,0.1); }
+            50% { text-shadow: 0 0 20px rgba(255,255,255,0.6), 0 0 40px rgba(244,114,182,0.5), 0 0 60px rgba(236,72,153,0.2); }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.15); }
+            30% { transform: scale(1); }
+            45% { transform: scale(1.1); }
+        }
+
+        @keyframes drawBorder {
+            from { stroke-dashoffset: 1000; }
+            to { stroke-dashoffset: 0; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes bloom {
+            0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+            60% { transform: scale(1.1) rotate(10deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        @keyframes letterReveal {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fadeInUp { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fadeInScale { animation: fadeInScale 0.8s ease-out forwards; }
+        .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .animate-sway { animation: sway 4s ease-in-out infinite; }
+        .animate-heartBeat { animation: heartBeat 2s ease-in-out infinite; }
+        .animate-bloom { animation: bloom 1.2s ease-out forwards; }
+
+        .letter-line {
+            opacity: 0;
+            animation: letterReveal 0.6s ease-out forwards;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f5 0%, #fce4ec 25%, #f8bbd0 50%, #fce4ec 75%, #fff0f5 100%);
+            overflow-x: hidden;
+        }
+
+        .letter-font { font-family: 'Lora', serif; }
+        .title-font { font-family: 'Dancing Script', cursive; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+
+        @keyframes floatGlow {
+            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-15px) scale(1.1); opacity: 1; }
+        }
+
+        @keyframes pinkShimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .sparkle-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #ff69b4, transparent);
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .glow-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .glow-card::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, #f9a8d4, #f472b6, #ec4899, #f472b6, #f9a8d4);
+            background-size: 300% 300%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: pinkShimmer 3s linear infinite;
+        }
+        .glow-card:hover::after {
+            opacity: 1;
+        }
+        .glow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(244, 114, 182, 0.25);
+        }
+
+        .pink-gradient-text {
+            background: linear-gradient(135deg, #be185d, #ec4899, #f472b6, #ec4899, #be185d);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: pinkShimmer 4s linear infinite;
+        }
+
+        .petal {
+            position: fixed;
+            pointer-events: none;
+            z-index: 50;
+            animation: floatUp linear forwards;
+        }
+
+        .sunflower-decoration {
+            filter: drop-shadow(0 2px 12px rgba(244, 114, 182, 0.3));
+        }
+
+        .photo-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .photo-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .letter-card {
+            background: linear-gradient(145deg, #ffffff 0%, #fff5f7 30%, #fce4ec 60%, #ffffff 100%);
+            border: 2px solid #f9a8d4;
+            position: relative;
+        }
+
+        .letter-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ec4899' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .music-btn {
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.85);
+            border: 1px solid rgba(244,114,182,0.3);
+            transition: all 0.3s ease;
+        }
+        .music-btn:hover {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 15px rgba(244,114,182,0.4);
+        }
+
+        .photo-grid-item {
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+        }
+        .photo-grid-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .photo-grid-item:hover::after {
+            opacity: 1;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active { display: flex; }
+
+        .envelope-flap {
+            transform-origin: top center;
+            transition: transform 1s ease-in-out;
+        }
+        .envelope-flap.open {
+            transform: rotateX(180deg);
+        }
+
+        .watermark {
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.03;
+            pointer-events: none;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #f472b6, transparent);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fff0f5; }
+        ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
+
+        .hero-bg {
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(252,228,236,0.7) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(249,168,212,0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(244,114,182,0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(255,240,245,0.6) 0%, transparent 40%),
+                linear-gradient(to bottom, #fff5f7, #fff0f5, #fce4ec);
+        }
+
+        .toast {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.15); opacity: 0.3; }
+            100% { transform: scale(1); opacity: 0.6; }
+        }
+
+        .heart-float {
+            position: fixed;
+            pointer-events: none;
+            z-index: 45;
+            animation: floatUp ease-out forwards;
+            font-size: 1.2rem;
+        }
+
+        .vinyl-spin {
+            animation: spin 3s linear infinite;
+            animation-play-state: paused;
+        }
+        .vinyl-spin.playing {
+            animation-play-state: running;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen relative">
+
+    <!-- Floating Petals Container -->
+    <div id="petals-container"></div>
+
+    <!-- Music Button -->
+    <button id="musicToggle" class="music-btn fixed top-4 right-4 z-50 rounded-full p-3 shadow-lg" onclick="toggleMusic()">
+        <div class="relative">
+            <i data-lucide="music" class="w-5 h-5 text-pink-700"></i>
+            <div id="musicBars" class="absolute -top-1 -right-1 flex gap-[2px] items-end opacity-0 transition-opacity">
+                <div class="w-[2px] h-2 bg-pink-500 rounded-full animate-pulse"></div>
+                <div class="w-[2px] h-3 bg-pink-500 rounded-full animate-pulse" style="animation-delay:0.2s"></div>
+                <div class="w-[2px] h-1.5 bg-pink-500 rounded-full animate-pulse" style="animation-delay:0.4s"></div>
+            </div>
+        </div>
+    </button>
+
+    <!-- Sparkles Container -->
+    <div id="sparkles-container" class="fixed inset-0 pointer-events-none z-40"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex flex-col items-center justify-center relative px-4 py-12 overflow-hidden">
+        <!-- Pink roses & flowers SVG decorations -->
+        <div class="absolute top-8 left-8 animate-sway opacity-40" style="animation-delay: 0.5s;">
+            <svg width="80" height="80" viewBox="0 0 100 100" class="sunflower-decoration">
+                <g transform="translate(50,50)">
+                    <circle cx="0" cy="0" r="12" fill="#e11d48"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(0)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(45)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(90)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(135)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(180)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(225)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(270)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(315)"/>
+                </g>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 right-8 animate-sway opacity-40" style="animation-delay: 1s;">
+            <svg width="100" height="100" viewBox="0 0 100 100" class="sunflower-decoration">
+                <g transform="translate(50,50)">
+                    <circle cx="0" cy="0" r="14" fill="#e11d48"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fce4ec" transform="rotate(0)"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fff0f5" transform="rotate(51.4)"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fce4ec" transform="rotate(102.8)"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fff0f5" transform="rotate(154.3)"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fce4ec" transform="rotate(205.7)"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fff0f5" transform="rotate(257.1)"/>
+                    <ellipse cx="0" cy="-25" rx="8" ry="15" fill="#fce4ec" transform="rotate(308.5)"/>
+                </g>
+            </svg>
+        </div>
+        <div class="absolute top-1/3 right-4 opacity-25 animate-sway" style="animation-delay: 1.5s;">
+            <svg width="60" height="60" viewBox="0 0 100 100" class="sunflower-decoration">
+                <g transform="translate(50,50)">
+                    <circle cx="0" cy="0" r="12" fill="#e11d48"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(0)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(45)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(90)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(135)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(180)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(225)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fce4ec" transform="rotate(270)"/>
+                    <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#fff0f5" transform="rotate(315)"/>
+                </g>
+            </svg>
+        </div>
+        <!-- Extra floating pink flowers -->
+        <div class="absolute bottom-1/3 left-4 opacity-20 animate-sway" style="animation-delay: 2s;">
+            <svg width="70" height="70" viewBox="0 0 100 100" class="sunflower-decoration">
+                <g transform="translate(50,50)">
+                    <circle cx="0" cy="0" r="11" fill="#f472b6"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(0)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(45)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(90)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(135)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(180)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(225)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(270)"/>
+                    <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(315)"/>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Main Hero Content -->
+        <div class="text-center relative z-10">
+            <!-- Pink White Sunflower -->
+            <div class="mb-6 flex justify-center">
+                <svg width="120" height="120" viewBox="0 0 120 120" class="animate-bloom sunflower-decoration" style="animation-delay: 0.3s;">
+                    <defs>
+                        <radialGradient id="centerGrad" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#f472b6"/>
+                            <stop offset="100%" style="stop-color:#e11d48"/>
+                        </radialGradient>
+                    </defs>
+                    <g transform="translate(60,60)">
+                        <circle cx="0" cy="0" r="16" fill="url(#centerGrad)"/>
+                        <!-- White petals with pink tint -->
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="white" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(0)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="#FFF5F7" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(30)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="white" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(60)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="#FFF5F7" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(90)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="white" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(120)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="#FFF5F7" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(150)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="white" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(180)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="#FFF5F7" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(210)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="white" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(240)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="#FFF5F7" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(270)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="white" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(300)"/>
+                        <ellipse cx="0" cy="-30" rx="10" ry="18" fill="#FFF5F7" stroke="#f9a8d4" stroke-width="0.5" transform="rotate(330)"/>
+                    </g>
+                </svg>
+            </div>
+
+            <p class="text-pink-600/70 text-sm tracking-[0.3em] uppercase mb-3 animate-fadeInUp" style="animation-delay: 0.5s;">A letter of love & healing</p>
+            
+            <h1 class="title-font text-5xl md:text-7xl lg:text-8xl pink-gradient-text mb-4 animate-fadeInUp animate-pulse-glow" style="animation-delay: 0.8s;">
+                Get Well Soon
+            </h1>
+            
+            <h2 class="title-font text-3xl md:text-4xl text-pink-700 mb-6 animate-fadeInUp" style="animation-delay: 1.2s;">
+                Saniaaa ✨🫶🏻💗
+            </h2>
+
+            <p class="text-pink-600/80 text-lg md:text-xl max-w-md mx-auto mb-8 letter-font italic animate-fadeInUp" style="animation-delay: 1.6s;">
+                "To my everything, my best friend — this is for you 🌸"
+            </p>
+
+            <!-- Hearts -->
+            <div class="flex justify-center gap-3 text-2xl animate-fadeInUp" style="animation-delay: 2s;">
+                <span class="animate-heartBeat" style="animation-delay: 0s;">💗</span>
+                <span class="animate-heartBeat" style="animation-delay: 0.3s;">🌸</span>
+                <span class="animate-heartBeat" style="animation-delay: 0.6s;">🤍</span>
+                <span class="animate-heartBeat" style="animation-delay: 0.9s;">💗</span>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+            <a href="#letter" class="flex flex-col items-center text-pink-700/50 hover:text-pink-700 transition-colors">
+                <span class="text-xs tracking-widest uppercase mb-2">Read your letter</span>
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Letter Section -->
+    <section id="letter" class="py-16 md:py-24 px-4 relative">
+        <div class="watermark top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-pink-800 select-none">Saniaaa</div>
+        
+        <div class="max-w-3xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <div class="section-divider text-pink-700/60 text-sm tracking-widest uppercase mb-4">
+                    <span>🌸 A Letter For You 🌸</span>
+                </div>
+            </div>
+
+            <!-- Letter Card -->
+            <div class="letter-card rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden glow-card">
+                <!-- Decorative corner flowers -->
+                <div class="absolute top-4 right-4 opacity-20">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                        <g transform="translate(50,50)">
+                            <circle cx="0" cy="0" r="10" fill="#e11d48"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(0)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(60)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(120)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(180)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(240)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(300)"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="absolute bottom-4 left-4 opacity-20">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                        <g transform="translate(50,50)">
+                            <circle cx="0" cy="0" r="10" fill="#e11d48"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(0)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(60)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(120)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(180)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fff0f5" transform="rotate(240)"/>
+                            <ellipse cx="0" cy="-20" rx="6" ry="12" fill="#fce4ec" transform="rotate(300)"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- Letter Header -->
+                <div class="text-center mb-8">
+                    <div class="inline-block">
+                        <svg width="40" height="40" viewBox="0 0 100 100" class="mx-auto mb-3 opacity-60">
+                            <g transform="translate(50,50)">
+                                <circle cx="0" cy="0" r="10" fill="#e11d48"/>
+                                <ellipse cx="0" cy="-18" rx="5" ry="10" fill="#fff0f5" transform="rotate(0)"/>
+                                <ellipse cx="0" cy="-18" rx="5" ry="10" fill="#fce4ec" transform="rotate(72)"/>
+                                <ellipse cx="0" cy="-18" rx="5" ry="10" fill="#fff0f5" transform="rotate(144)"/>
+                                <ellipse cx="0" cy="-18" rx="5" ry="10" fill="#fce4ec" transform="rotate(216)"/>
+                                <ellipse cx="0" cy="-18" rx="5" ry="10" fill="#fff0f5" transform="rotate(288)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="heading-font text-2xl md:text-3xl text-pink-800 font-semibold">
+                        To my everything, my best friend,
+                    </h3>
+                    <h3 class="title-font text-3xl md:text-4xl text-pink-700 mt-1">
+                        Saniaaa ✨🫶🏻💗
+                    </h3>
+                </div>
+
+                <!-- Decorative Line -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex-1 h-px bg-gradient-to-r from-transparent via-pink-300 to-pink-300"></div>
+                    <span class="text-pink-400 text-xl">🌸</span>
+                    <div class="flex-1 h-px bg-gradient-to-r from-pink-300 via-pink-300 to-transparent"></div>
+                </div>
+
+                <!-- Letter Body -->
+                <div class="letter-font text-pink-900/85 text-base md:text-lg leading-relaxed space-y-6 relative z-10">
+                    <p class="letter-line" style="animation-delay: 0.3s;">
+                        I know you're not feeling well right now, and honestly, it hurts to know that you're going through all of this. I just want you to focus on yourself and take proper rest. <span class="text-pink-700 font-medium">InshaAllah, you'll recover soon</span> and be back to being the amazing person you are.
+                    </p>
+
+                    <p class="letter-line" style="animation-delay: 0.6s;">
+                        Please take your medicines on time, drink plenty of water, and don't ignore your body's need for rest. Right now, your only job is to get better. <span class="text-pink-700 font-medium">Nothing is more important than your health.</span>
+                    </p>
+
+                    <p class="letter-line" style="animation-delay: 0.9s;">
+                        I'm keeping you in my prayers and asking Allah to bless you with a complete and speedy recovery. <span class="text-pink-700 font-medium">InshaAllah, this fever, the body pain, and all the discomfort will pass soon,</span> and you'll be smiling again like always.
+                    </p>
+
+                    <p class="letter-line" style="animation-delay: 1.2s;">
+                        You mean so much to me, and seeing my everything, my best friend feeling unwell is something I wish I could change. <span class="text-pink-700 font-medium">If I could, I'd take away all the pain and discomfort</span> just so you could feel better.
+                    </p>
+
+                    <p class="letter-line" style="animation-delay: 1.5s;">
+                        Until then, please take care of yourself for me. Rest well, stay strong, and remember that you're not alone. I'm always here, cheering for your recovery and praying that <span class="text-pink-700 font-medium">Allah grants you shifa-e-kamilah</span> very soon.
+                    </p>
+
+                    <!-- Closing -->
+                    <div class="text-center mt-10 letter-line" style="animation-delay: 1.8s;">
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <div class="h-px w-16 bg-pink-300"></div>
+                            <span class="text-2xl">💗</span>
+                            <div class="h-px w-16 bg-pink-300"></div>
+                        </div>
+                        <p class="title-font text-2xl md:text-3xl text-pink-800 mb-2">
+                            Get well soon, my everything, my best friend. 💗🌸
+                        </p>
+                        <p class="text-pink-700 italic">
+                            May Allah heal you, protect you, and bring your beautiful smile back as soon as possible. Ameen. ✨🫶🏻💗
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Letter Footer Decoration -->
+                <div class="flex justify-center mt-8 gap-2">
+                    <span class="text-xl opacity-60">🌸</span>
+                    <span class="text-xl opacity-80">💗</span>
+                    <span class="text-xl opacity-60">🤍</span>
+                    <span class="text-xl opacity-80">🌸</span>
+                    <span class="text-xl opacity-60">✨</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Section -->
+    <section class="py-16 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-pink-50/50 to-transparent"></div>
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+            <div class="mb-8">
+                <span class="text-4xl">🕌</span>
+            </div>
+            <h3 class="heading-font text-2xl md:text-3xl text-pink-800 mb-6">A Prayer For You</h3>
+            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-pink-200/50 shadow-lg glow-card">
+                <p class="title-font text-xl md:text-2xl text-pink-800 leading-relaxed">
+                    "اللهم اشفها شفاءً لا يغادر سقماً"
+                </p>
+                <p class="text-pink-700/80 mt-4 letter-font italic">
+                    "O Allah, cure her with a cure that leaves no illness behind."
+                </p>
+                <div class="mt-6 flex justify-center">
+                    <span class="animate-heartBeat text-2xl">💗</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Album Section -->
+    <section id="album" class="py-16 md:py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <div class="section-divider text-pink-700/60 text-sm tracking-widest uppercase mb-4">
+                    <span>📸 Our Memories 📸</span>
+                </div>
+                <h3 class="heading-font text-3xl md:text-4xl text-pink-800">
+                    Our Beautiful Moments Together
+                </h3>
+                <p class="text-pink-600/70 mt-2 letter-font italic">Every picture holds a thousand memories 🌸</p>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6" id="photoGrid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Song Dedication Section -->
+    <section class="py-16 md:py-24 px-4 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-pink-50/30 to-transparent"></div>
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+            <div class="section-divider text-pink-700/60 text-sm tracking-widest uppercase mb-8">
+                <span>🎵 A Song For You 🎵</span>
+            </div>
+
+            <!-- Vinyl Player -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-pink-200/50 shadow-xl glow-card">
+                <div class="flex flex-col items-center">
+                    <!-- Vinyl -->
+                    <div class="relative mb-8">
+                        <div id="vinyl" class="vinyl-spin w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-gray-800 via-gray-900 to-black shadow-2xl flex items-center justify-center relative">
+                            <div class="absolute inset-0 rounded-full" style="background: repeating-radial-gradient(circle at center, transparent 0px, transparent 8px, rgba(255,255,255,0.05) 9px, transparent 10px);"></div>
+                            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-pink-100 to-pink-200 shadow-inner flex items-center justify-center z-10 border-2 border-pink-300">
+                                <div class="w-3 h-3 rounded-full bg-gray-800"></div>
+                            </div>
+                        </div>
+                        <!-- Tone Arm -->
+                        <div class="absolute top-2 -right-4 md:-right-6 transform rotate-[30deg] origin-top transition-transform duration-500" id="toneArm">
+                            <div class="w-1.5 h-20 bg-gray-600 rounded-full"></div>
+                            <div class="w-3 h-4 bg-gray-500 rounded-full ml-[2px] -mt-1"></div>
+                        </div>
+                    </div>
+
+                    <h4 class="title-font text-2xl md:text-3xl text-pink-800 mb-2">Perfect</h4>
+                    <p class="text-pink-600/70 mb-1">Ed Sheeran</p>
+                    <p class="text-pink-500/60 text-sm italic mb-6">A song that reminds me of our friendship 💗</p>
+
+                    <!-- Play Button -->
+                    <button onclick="toggleMusic()" id="playBtn" class="group flex items-center gap-3 bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        <i data-lucide="play" class="w-5 h-5" id="playIcon"></i>
+                        <span id="playText">Play Our Song</span>
+                    </button>
+
+                    <p class="text-pink-600/50 text-xs mt-4">Press play to listen 🎧</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Healing Wishes Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="section-divider text-pink-700/60 text-sm tracking-widest uppercase mb-4">
+                    <span>💗 Healing Wishes 💗</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Wish Card 1 -->
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-pink-200/50 shadow-lg text-center glow-card">
+                    <div class="text-4xl mb-4">🪷</div>
+                    <h4 class="heading-font text-lg text-pink-800 mb-2">Rest & Recover</h4>
+                    <p class="text-pink-700/70 text-sm letter-font">Take all the time you need. Your health comes first, always. 💗</p>
+                </div>
+
+                <!-- Wish Card 2 -->
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-pink-200/50 shadow-lg text-center glow-card">
+                    <div class="text-4xl mb-4">💗</div>
+                    <h4 class="heading-font text-lg text-pink-800 mb-2">You're Not Alone</h4>
+                    <p class="text-pink-700/70 text-sm letter-font">I'm always here for you, no matter what. You mean everything to me. ✨</p>
+                </div>
+
+                <!-- Wish Card 3 -->
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-pink-200/50 shadow-lg text-center glow-card">
+                    <div class="text-4xl mb-4">🌙</div>
+                    <h4 class="heading-font text-lg text-pink-800 mb-2">Prayers Always</h4>
+                    <p class="text-pink-700/70 text-sm letter-font">Every prayer, every wish is for your health and happiness. InshaAllah! 🌸</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 text-center relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-pink-100/50 to-transparent"></div>
+        <div class="relative z-10">
+            <div class="flex justify-center gap-2 mb-4">
+                <span class="text-xl opacity-60">🌸</span>
+                <span class="text-xl opacity-80">💗</span>
+                <span class="text-xl opacity-60">🤍</span>
+                <span class="text-xl opacity-80">🌸</span>
+                <span class="text-xl opacity-60">✨</span>
+            </div>
+            <p class="title-font text-xl text-pink-800 mb-2">
+                Get Well Soon, Saniaaa 🌸
+            </p>
+            <p class="text-pink-600/60 text-sm">
+                Made with 💗 and lots of prayers
+            </p>
+            <p class="text-pink-500/40 text-xs mt-4 letter-font italic">
+                "And when you smile, the whole world brighter becomes..." ✨
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)" style="background: rgba(0,0,0,0.92);">
+        <button onclick="closeLightbox(event)" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <button onclick="prevPhoto(event)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors z-10">
+            <i data-lucide="chevron-left" class="w-10 h-10"></i>
+        </button>
+        <button onclick="nextPhoto(event)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors z-10">
+            <i data-lucide="chevron-right" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Memory" class="max-w-[90vw] max-h-[85vh] rounded-xl shadow-2xl object-contain">
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast fixed bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm text-pink-800 px-6 py-3 rounded-full shadow-lg border border-pink-200/50 z-[100] text-sm letter-font">
+        🌸 Press play to listen to our song!
+    </div>
+
+    <!-- Audio -->
+    <audio id="songPlayer" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Photo Album Data
+        const photos = [
+            { url: 'http://static.photos/nature/640x360/1', caption: 'Beautiful moments 🌸' },
+            { url: 'http://static.photos/people/640x360/2', caption: 'Together forever 🤍' },
+            { url: 'http://static.photos/travel/640x360/3', caption: 'Adventures await ✨' },
+            { url: 'http://static.photos/nature/640x360/4', caption: 'Sunshine days 🌼' },
+            { url: 'http://static.photos/education/640x360/5', caption: 'Growing together 🌻' },
+            { url: 'http://static.photos/wellness/640x360/6', caption: 'Healing vibes 🪷' },
+            { url: 'http://static.photos/season/640x360/7', caption: 'Every season 💛' },
+            { url: 'http://static.photos/outdoor/640x360/8', caption: 'Under the sky ✨' },
+            { url: 'http://static.photos/nature/640x360/9', caption: 'Blooming like flowers 🌸' },
+            { url: 'http://static.photos/indoor/640x360/10', caption: 'Cozy memories 🤍' }
+        ];
+
+        let currentPhotoIndex = 0;
+        let isMusicPlaying = false;
+
+        // Build Photo Grid
+        function buildPhotoGrid() {
+            const grid = document.getElementById('photoGrid');
+            photos.forEach((photo, index) => {
+                const isLarge = index === 0 || index === 5;
+                const div = document.createElement('div');
+                div.className = `photo-card photo-grid-item cursor-pointer ${isLarge ? 'col-span-2 row-span-2' : ''} relative group`;
+                div.onclick = () => openLightbox(index);
+                div.innerHTML = `
+                    <img src="${photo.url}" alt="${photo.caption}" 
+                         class="w-full h-full object-cover rounded-xl ${isLarge ? 'min-h-[240px]' : 'min-h-[160px]'}"
+                         loading="lazy"
+                         onerror="this.src='http://static.photos/nature/${isLarge ? '1024x576' : '640x360'}/${index + 1}'"
+                         style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-4">
+                        <span class="text-white text-sm font-medium">${photo.caption}</span>
+                    </div>
+                    <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="bg-white/80 backdrop-blur-sm rounded-full p-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        // Lightbox
+        function openLightbox(index) {
+            currentPhotoIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = photos[index].url;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox' || event.target.closest('button')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function prevPhoto(event) {
+            event.stopPropagation();
+            currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+            document.getElementById('lightbox-img').src = photos[currentPhotoIndex].url;
+        }
+
+        function nextPhoto(event) {
+            event.stopPropagation();
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            document.getElementById('lightbox-img').src = photos[currentPhotoIndex].url;
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') { lightbox.classList.remove('active'); document.body.style.overflow = ''; }
+            if (e.key === 'ArrowLeft') { prevPhoto(new Event('click')); }
+            if (e.key === 'ArrowRight') { nextPhoto(new Event('click')); }
+        });
+
+        // Music
+        function toggleMusic() {
+            const player = document.getElementById('songPlayer');
+            const vinyl = document.getElementById('vinyl');
+            const musicBars = document.getElementById('musicBars');
+            const playIcon = document.getElementById('playIcon');
+            const playText = document.getElementById('playText');
+            const toneArm = document.getElementById('toneArm');
+
+            if (isMusicPlaying) {
+                player.pause();
+                vinyl.classList.remove('playing');
+                musicBars.classList.add('opacity-0');
+                musicBars.classList.remove('opacity-100');
+                playIcon.setAttribute('data-lucide', 'play');
+                playText.textContent = 'Play Our Song';
+                toneArm.style.transform = 'rotate(30deg)';
+                isMusicPlaying = false;
+            } else {
+                player.play().then(() => {
+                    vinyl.classList.add('playing');
+                    musicBars.classList.remove('opacity-0');
+                    musicBars.classList.add('opacity-100');
+                    playIcon.setAttribute('data-lucide', 'pause');
+                    playText.textContent = 'Pause Song';
+                    toneArm.style.transform = 'rotate(5deg)';
+                    isMusicPlaying = true;
+                }).catch(() => {
+                    showToast('🎵 Click anywhere first, then press play to listen!');
+                });
+            }
+            lucide.createIcons();
+        }
+
+        // Floating Petals
+        function createPetal() {
+            const container = document.getElementById('petals-container');
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+
+            const petalTypes = ['🌸', '💗', '🤍', '✨', '🩷', '🌺'];
+            petal.textContent = petalTypes[Math.floor(Math.random() * petalTypes.length)];
+
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.fontSize = (Math.random() * 16 + 12) + 'px';
+            petal.style.animationDuration = (Math.random() * 8 + 10) + 's';
+            petal.style.animationDelay = Math.random() * 2 + 's';
+
+            container.appendChild(petal);
+
+            setTimeout(() => {
+                petal.remove();
+            }, 18000);
+        }
+
+        // Sparkle Effect
+        function createSparkle() {
+            const container = document.getElementById('sparkles-container');
+            if (!container) return;
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle-dot';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+            sparkle.style.animationDelay = Math.random() * 1 + 's';
+            sparkle.style.width = (Math.random() * 6 + 3) + 'px';
+            sparkle.style.height = sparkle.style.width;
+            container.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 4000);
+        }
+
+        // Floating hearts
+        function createHeartFloat() {
+            const heart = document.createElement('div');
+            heart.className = 'heart-float';
+            const hearts = ['💗', '🤍', '🌸', '✨'];
+            heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.bottom = '-20px';
+            heart.style.fontSize = (Math.random() * 14 + 10) + 'px';
+            heart.style.animationDuration = (Math.random() * 6 + 8) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 14000);
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Letter line animations with scroll
+        const letterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            buildPhotoGrid();
+            lucide.createIcons();
+
+            // Start floating petals
+            setInterval(createPetal, 3000);
+            // Create a few initially
+            for (let i = 0; i < 5; i++) {
+                setTimeout(createPetal, i * 800);
+            }
+
+            // Start sparkles
+            setInterval(createSparkle, 800);
+            for (let i = 0; i < 8; i++) {
+                setTimeout(createSparkle, i * 300);
+            }
+
+            // Start floating hearts
+            setInterval(createHeartFloat, 5000);
+            setTimeout(createHeartFloat, 1000);
+
+            // Animate letter lines on scroll
+            document.querySelectorAll('.letter-line').forEach(line => {
+                line.style.animationPlayState = 'paused';
+                letterObserver.observe(line);
+            });
+
+            // Observe photo cards
+            document.querySelectorAll('.photo-card').forEach((card, i) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `all 0.6s ease ${i * 0.1}s`;
+                observer.observe(card);
+            });
+
+            // Show welcome toast
+            setTimeout(() => {
+                showToast('🌸 Made with love for Saniaaa ✨🫶🏻💗');
+            }, 2000);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-bg');
+            if (hero) {
+                hero.style.backgroundPositionY = scrolled * 0.3 + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
+
